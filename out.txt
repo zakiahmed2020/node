@@ -1,0 +1,126 @@
+const {add,subtr} =require("./calculator");
+
+/// question 1 callback
+function sum(a, b, cl) {
+  settimeout(() => {
+    cl();
+    return a + b;
+  }, 1000);
+}
+
+// let result =sum(2,3,function(){
+// console.log(result);
+// });
+
+// function dohomework(subject, callback){
+//     settimeout(callback,500);
+//     console.log("doing my homework:", subject)
+// }
+
+// dohomework("maths", function(){
+//     console.log("finished my homework");
+// });
+
+
+// question 2 promise
+// const isavailable = true;
+// const mypromise = new  promise((resolve, reject) => {
+//   settimeout(() => {
+//     if (isavailable) {
+//       resolve("success");
+//     } else {
+//       reject("fail");
+//     }
+//   }, 1000);
+// });
+// mypromise
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+  // question 3 async and wait
+  // const isavailable = true;
+
+  // async function mypromises(){
+  //   await settimeout(() => {
+  //       if (isavailable) {
+  //         console.log("success");
+  //       } else {
+  //         console.log("fail");
+  //       }
+  //     }, 1000);
+
+  // }
+  // try {
+  //   mypromises();
+      
+  // } catch (error) {
+  //     console.log(error.message);
+      
+  // }
+
+  
+//assingment 4
+// question 1
+//  
+// question 2
+// i installed all packages 
+
+// question 3
+// it comes from calculator module
+// let addresult =add(20,10)
+// let subresult =subtr(40,10)
+// console.log(addresult);
+// console.log(subresult);
+
+// assingment 4
+// question 1
+
+// function test(a,b){
+//   if(a==b){
+//     return true;
+
+//   }else{
+//     throw new error("not equal to a and b");
+//   }
+
+// }
+// try {
+//   const rescult= test(1,1);
+//   console.log(rescult);
+  
+// } catch (error) {
+//   console.log(error.message);
+  
+// }
+
+// question 2
+
+const { parse, basename, dirname, extname , join  } = require('path')
+// console.log('filename parsed:', parse(__filename));
+// console.log('filename parsed:', parse(__filename));
+
+// question 3
+// file extention
+// console.log('filename basename:', basename(__filename));
+// base file
+// console.log('filename extname:', extname(__filename))
+
+
+
+// question 4
+// reading a file
+const { readfilesync,writefilesync } = require('fs');
+const contents = readfilesync(__filename,{encoding: 'utf8'});
+// console.log(contents);
+
+// writing file
+writefilesync(join(__dirname, 'out.txt'), 
+contents.tolocalelowercase());
+
+
+
+
